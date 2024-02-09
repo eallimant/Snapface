@@ -1,1 +1,9 @@
-<p>face-snap works pretty well !</p>
+<div class="face-snap-card">
+<h2>{{this.faceSnap.title}}</h2>
+<!-- <img src="{{this.faceSnap.imageUrl}}" width="200px" height=""/> Dans ce cas, on ne va pas faire du string interpolation--> 
+<img [src]="this.faceSnap.imageUrl" width="200px" height="" [title]="this.faceSnap.title"/>
+<p *ngIf="faceSnap.location">Photo prise à : {{this.faceSnap.location}}</p>
+<p>{{this.faceSnap.description}}</p>
+<p>{{this.faceSnap.createDate}}</p>
+<p>👍 {{this.faceSnap.snaps}}&nbsp;<button (click)="onSnap()">{{snapText}}</button></p>
+</div>
