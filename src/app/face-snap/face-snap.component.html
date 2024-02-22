@@ -1,9 +1,5 @@
-<div class="face-snap-card" [ngClass]="{'snapped' : !this.snaped}">
+<div class="face-snap-card">
 <h2>{{this.faceSnap.title | uppercase }}</h2>
-<p>Mise en ligne : {{this.faceSnap.createDate | date}}</p>
-<!-- <img src="{{this.faceSnap.imageUrl}}" width="200px" height=""/> Dans ce cas, on ne va pas faire du string interpolation--> 
-<img [src]="this.faceSnap.imageUrl" width="200px" height="" [title]="this.faceSnap.title"/>
-<p *ngIf="faceSnap.location">Photo prise à : {{this.faceSnap.location}}</p>
 <p>{{this.faceSnap.description}}</p>
-<p><span [ngStyle]="{'color': 'rgb(100,' + 100+this.faceSnap.snaps + ',0)'}">👍{{ faceSnap.snaps }}</span>&nbsp;<button (click)="onSnap()">{{snapText}}</button></p>
+<button (click)="onViewFaceSnap()">VIEW</button>
 </div>
